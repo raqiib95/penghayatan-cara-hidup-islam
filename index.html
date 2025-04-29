@@ -1,21 +1,32 @@
+<!DOCTYPE html>
 <html lang="ms"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Permainan Kad Pendidikan Islam</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f0f7ff;
-            color: #333;
-.arabic {
-  font-family: 'Scheherazade New', serif;
-  font-size: 1.25rem; /* atau ikut suka */
-  direction: rtl; /* dari kanan ke kiri */
-  text-align: right;
-}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New&family=Montserrat:wght@400;600;700&display=swap');
+
+    :root {
+        --primary: #2c3e50;
+        --secondary: #e74c3c;
+        --accent: #f39c12;
+        --light: #ecf0f1;
+        --dark: #2c3e50;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f8f9fa;
+        color: var(--primary);
+        direction: ltr;
+    }
+
+    .arabic-text {
+        font-family: 'Scheherazade New', 'Amiri', serif;
+        font-size: 1.25rem;
+        direction: rtl;
+        text-align: right;
 
 .flip-card {
     background-color: transparent;
@@ -370,9 +381,13 @@
                         </svg>
                         <h4 class="text-xl font-bold mb-4">Buku Panduan PDF</h4>
                         <p class="mb-6">Klik butang di bawah untuk muat turun atau lihat buku panduan lengkap.</p>
-                        <button class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                            Muat Turun PDF
-                        </button>
+<a href="https://raw.githubusercontent.com/raqiib95/penghayatan-cara-hidup-islam/refs/heads/main/pdf/Penghayatan%20Cara%20Hidup%20Islam(PCHI)%20UPKK.pdf" 
+   target="_blank" 
+   download
+   class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block text-center">
+   Muat Turun PDF
+</a>
+
                     </div>
                 </div>
             </div>
@@ -430,227 +445,225 @@
     </div>
 
     <footer class="mt-12 py-4 border-t border-gray-200 text-center">
-        <p class="text-gray-600">Dibangunkan oleh: (C) 2025 Abdul Raqiib bin Basiran &amp; Iqraq Education</p>
+        <p class="text-gray-600">© 2025 Abdul Raqiib bin Basiran &amp; Iqraq Education</p>
         <a href="https://wasap.my/+601172706678" class="text-blue-600 hover:underline">Hubungi saya</a>
     </footer>
 
     <script>
         // Data Structure
-        const data = {
-            categories: [
-                {
-                    id: 'peradaban',
-                    name: 'Peradaban',
-                    arabicName: 'ڤرادبن',
-                    color: 'blue',
-                    subCategories: [
-                        {
-                            id: 'adab-keluarga',
-                            name: 'Adab dalam Keluarga',
-                            questions: [
-                                { question: 'Apakah adab terhadap ibu bapa?', answer: 'Menghormati, mentaati perintah yang baik, berbicara dengan lemah lembut, mendoakan mereka, dan tidak menyakiti hati mereka.' },
-                                { question: 'Bagaimana cara menghormati adik-beradik?', answer: 'Menyayangi yang lebih muda, menghormati yang lebih tua, saling membantu, dan tidak bertengkar.' },
-                                { question: 'Apakah tanggungjawab anak terhadap keluarga?', answer: 'Membantu ibu bapa, menjaga nama baik keluarga, dan menjaga hubungan baik dengan semua ahli keluarga.' },
-                                { question: 'Bagaimana adab ketika berbicara dengan orang tua?', answer: 'Menggunakan suara yang lembut, tidak memotong percakapan, menggunakan bahasa yang sopan, dan mendengar dengan penuh perhatian.' },
-                                { question: 'Apakah yang perlu dilakukan jika terdapat perselisihan dalam keluarga?', answer: 'Bersabar, bertenang, berbincang dengan baik, meminta maaf jika bersalah, dan mencari penyelesaian bersama.' }
-                            ]
-                        },
-                        {
-                            id: 'adab-harian',
-                            name: 'Adab dalam Kehidupan Harian',
-                            questions: [
-                                { question: 'Apakah adab sebelum tidur?', answer: 'Berwudhu, membaca doa sebelum tidur, tidur menghadap kiblat, dan membaca surah-surah tertentu seperti Al-Ikhlas, Al-Falaq, dan An-Nas.' },
-                                { question: 'Bagaimana adab ketika makan?', answer: 'Membaca bismillah, makan dengan tangan kanan, makan makanan yang terdekat, tidak mencela makanan, dan membaca doa selepas makan.' },
-                                { question: 'Apakah adab ketika berjalan di jalan raya?', answer: 'Berjalan di tepi jalan, tidak mengganggu pengguna jalan lain, membantu orang yang memerlukan, dan menjaga keselamatan diri.' },
-                                { question: 'Bagaimana adab ketika bertemu dengan orang lain?', answer: 'Memberi salam, tersenyum, berbicara dengan sopan, dan menghormati orang yang lebih tua.' },
-                                { question: 'Apakah adab ketika berada di tempat awam?', answer: 'Menjaga kebersihan, tidak membuat bising, menghormati orang lain, dan mematuhi peraturan tempat tersebut.' },
-                                { question: 'Bagaimana adab ketika menggunakan telefon?', answer: 'Berbicara dengan suara yang sesuai, tidak mengganggu orang lain, dan menggunakan bahasa yang sopan.' }
-                            ]
-                        },
-                        {
-                            id: 'adab-sekolah',
-                            name: 'Adab di Sekolah',
-                            questions: [
-                                { question: 'Apakah adab terhadap guru?', answer: 'Menghormati guru, mendengar dengan penuh perhatian, tidak memotong percakapan guru, dan mentaati arahan guru.' },
-                                { question: 'Bagaimana adab ketika berada di dalam kelas?', answer: 'Duduk dengan tertib, tidak membuat bising, menumpukan perhatian kepada pengajaran, dan bertanya dengan sopan.' },
-                                { question: 'Apakah adab terhadap rakan sekolah?', answer: 'Menghormati rakan, saling membantu, tidak mengejek, dan menyelesaikan perselisihan dengan baik.' },
-                                { question: 'Bagaimana adab ketika berada di perpustakaan?', answer: 'Menjaga ketenangan, menjaga kebersihan buku, mengembalikan buku pada tempatnya, dan tidak merosakkan buku.' },
-                                { question: 'Apakah adab ketika menggunakan kemudahan sekolah?', answer: 'Menjaga kebersihan, tidak merosakkan kemudahan, menggunakan dengan berhemah, dan melaporkan kerosakan kepada pihak berkenaan.' }
-                            ]
-                        },
-                        {
-                            id: 'adab-pakaian',
-                            name: 'Adab Berpakaian',
-                            questions: [
-                                { question: 'Apakah ciri-ciri pakaian yang menutup aurat bagi lelaki?', answer: 'Menutup bahagian antara pusat hingga lutut, tidak ketat, tidak jarang, dan tidak menyerupai pakaian wanita.' },
-                                { question: 'Apakah ciri-ciri pakaian yang menutup aurat bagi perempuan?', answer: 'Menutup seluruh tubuh kecuali muka dan tapak tangan, tidak ketat, tidak jarang, dan tidak menyerupai pakaian lelaki.' },
-                                { question: 'Bagaimana adab berpakaian ketika ke sekolah?', answer: 'Memakai pakaian seragam dengan kemas, bersih, dan mengikut peraturan sekolah.' },
-                                { question: 'Apakah adab berpakaian ketika ke masjid atau surau?', answer: 'Memakai pakaian yang bersih, sopan, menutup aurat dengan sempurna, dan tidak memakai pakaian yang menarik perhatian.' },
-                                { question: 'Bagaimana adab berpakaian ketika menghadiri majlis?', answer: 'Memakai pakaian yang sesuai dengan majlis, bersih, kemas, dan menutup aurat.' }
-                            ]
-                        },
-                        {
-                            id: 'doa-harian',
-                            name: 'Doa Harian',
-                            questions: [
-                                { question: 'Apakah doa sebelum makan?', answer: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ (Bismillahir rahmanir rahim)' },
-                                { question: 'Apakah doa selepas makan?', answer: 'الْحَمْدُ لِلّٰهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِمِينَ (Alhamdulillahil lazi at\'amana wa saqana wa ja\'alana minal muslimin)' },
-                                { question: 'Apakah doa sebelum tidur?', answer: 'بِاسْمِكَ اللّٰهُمَّ أَمُوتُ وَأَحْيَا (Bismika Allahumma amutu wa ahya)' },
-                                { question: 'Apakah doa ketika bangun tidur?', answer: 'الْحَمْدُ لِلّٰهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ (Alhamdulillahil lazi ahyana ba\'da ma amatana wa ilaihin nushur)' },
-                                { question: 'Apakah doa masuk tandas?', answer: 'اللّٰهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ (Allahumma inni a\'uzu bika minal khubuthi wal khabaits)' },
-                                { question: 'Apakah doa keluar tandas?', answer: 'غُفْرَانَكَ الْحَمْدُ لِلّٰهِ الَّذِي أَذْهَبَ عَنِّي الْأَذَى وَعَافَانِي (Ghufranaka. Alhamdulillahil lazi azhaba \'annil aza wa \'afani)' }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: 'ibadah',
-                    name: 'Ibadah',
-                    arabicName: 'عبادة',
-                    color: 'green',
-                    subCategories: [
-                        {
-                            id: 'toharoh',
-                            name: 'Toharoh (Kesucian)',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan toharoh?', answer: 'Toharoh bermaksud bersuci daripada hadas kecil dan hadas besar serta najis.' },
-                                { question: 'Apakah perbezaan antara wudhu dan tayammum?', answer: 'Wudhu menggunakan air untuk bersuci, manakala tayammum menggunakan debu yang suci sebagai ganti air ketika tiada air atau tidak boleh menggunakan air.' },
-                                { question: 'Bilakah seseorang perlu melakukan istinja\'?', answer: 'Istinja\' perlu dilakukan selepas membuang air kecil atau air besar untuk membersihkan najis.' }
-                            ]
-                        },
-                        {
-                            id: 'solat',
-                            name: 'Solat',
-                            questions: [
-                                { question: 'Apakah rukun solat?', answer: 'Rukun solat terdiri daripada niat, berdiri tegak bagi yang mampu, takbiratul ihram, membaca Al-Fatihah, rukuk, iktidal, sujud, duduk antara dua sujud, duduk tahiyat akhir, membaca tahiyat akhir, selawat ke atas Nabi dalam tahiyat akhir, memberi salam yang pertama, dan tertib.' },
-                                { question: 'Apakah perkara yang membatalkan solat?', answer: 'Perkara yang membatalkan solat termasuk berhadas, terkena najis, terbuka aurat, berkata-kata dengan sengaja, banyak bergerak, makan atau minum, tertawa, dan murtad.' },
-                                { question: 'Bagaimanakah cara melakukan solat jamak?', answer: 'Solat jamak dilakukan dengan menggabungkan dua solat dalam satu waktu, iaitu Zohor dengan Asar, atau Maghrib dengan Isyak. Boleh dilakukan secara jamak taqdim (solat awal) atau jamak takhir (solat akhir).' }
-                            ]
-                        },
-                        {
-                            id: 'puasa',
-                            name: 'Puasa',
-                            questions: [
-                                { question: 'Apakah rukun puasa?', answer: 'Rukun puasa ialah niat pada malam hari dan menahan diri daripada perkara yang membatalkan puasa dari terbit fajar hingga terbenam matahari.' },
-                                { question: 'Apakah perkara yang membatalkan puasa?', answer: 'Perkara yang membatalkan puasa termasuk makan dan minum dengan sengaja, muntah dengan sengaja, haid dan nifas, gila, dan murtad.' },
-                                { question: 'Siapakah yang diharuskan untuk tidak berpuasa?', answer: 'Orang yang diharuskan untuk tidak berpuasa termasuk orang sakit, musafir, wanita hamil atau menyusukan anak, dan orang tua yang tidak mampu berpuasa.' }
-                            ]
-                        },
-                        {
-                            id: 'hadas-besar',
-                            name: 'Menyucikan Hadas Besar',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan hadas besar?', answer: 'Hadas besar adalah keadaan tidak suci yang memerlukan mandi wajib untuk bersuci, seperti selepas berjimak, keluar air mani, haid, nifas, dan wiladah.' },
-                                { question: 'Bagaimanakah cara melakukan mandi wajib?', answer: 'Mandi wajib dilakukan dengan niat, membasuh seluruh tubuh termasuk rambut, dan memastikan air sampai ke seluruh bahagian tubuh termasuk lipatan-lipatan kulit.' },
-                                { question: 'Bilakah seseorang wajib melakukan mandi wajib?', answer: 'Seseorang wajib melakukan mandi wajib selepas berjimak, keluar air mani sama ada ketika tidur atau jaga, selepas haid, selepas nifas, dan selepas melahirkan anak.' }
-                            ]
-                        },
-                        {
-                            id: 'solat-jamak-qasar',
-                            name: 'Solat Jamak dan Qasar',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan solat qasar?', answer: 'Solat qasar adalah memendekkan solat 4 rakaat (Zohor, Asar, dan Isyak) menjadi 2 rakaat ketika dalam perjalanan yang memenuhi syarat.' },
-                                { question: 'Apakah syarat-syarat untuk melakukan solat jamak?', answer: 'Syarat-syarat solat jamak termasuk dalam perjalanan yang memenuhi syarat, dalam keadaan hujan lebat, sakit, atau keadaan yang menyukarkan untuk melakukan solat pada waktunya.' },
-                                { question: 'Bolehkah solat jamak dan qasar dilakukan serentak?', answer: 'Ya, solat jamak dan qasar boleh dilakukan serentak bagi musafir yang memenuhi syarat-syarat kedua-duanya.' }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: 'akidah',
-                    name: 'Akidah',
-                    arabicName: 'عقيدة',
-                    color: 'purple',
-                    subCategories: [
-                        {
-                            id: 'rukun-islam-iman',
-                            name: 'Rukun Islam/Rukun Iman',
-                            questions: [
-                                { question: 'Apakah Rukun Islam?', answer: 'Rukun Islam terdiri daripada lima perkara: mengucap dua kalimah syahadah, mendirikan solat lima waktu, menunaikan zakat, berpuasa di bulan Ramadhan, dan menunaikan haji bagi yang mampu.' },
-                                { question: 'Apakah Rukun Iman?', answer: 'Rukun Iman terdiri daripada enam perkara: beriman kepada Allah, beriman kepada Malaikat, beriman kepada Kitab-kitab, beriman kepada Rasul-rasul, beriman kepada Hari Kiamat, dan beriman kepada Qada\' dan Qadar.' },
-                                { question: 'Mengapa kita perlu beriman kepada Rukun Islam dan Rukun Iman?', answer: 'Rukun Islam dan Rukun Iman adalah asas kepercayaan dan amalan dalam Islam. Beriman kepada keduanya adalah syarat untuk menjadi seorang Muslim yang sejati dan mendapat keredhaan Allah SWT.' }
-                            ]
-                        },
-                        {
-                            id: 'sifat-wajib-allah',
-                            name: 'Sifat Wajib bagi Allah',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan sifat wajib bagi Allah?', answer: 'Sifat wajib bagi Allah adalah sifat-sifat kesempurnaan yang pasti ada pada Allah SWT dan mustahil tiada pada-Nya.' },
-                                { question: 'Sebutkan 20 sifat wajib bagi Allah.', answer: 'Wujud, Qidam, Baqa\', Mukhalafatuhu lil hawadith, Qiyamuhu binafsihi, Wahdaniyyah, Qudrat, Iradat, Ilmu, Hayat, Sama\', Basar, Kalam, Qadirun, Muridun, Alimun, Hayyun, Sami\'un, Basirun, Mutakallimun.' },
-                                { question: 'Apakah maksud sifat Wahdaniyyah?', answer: 'Wahdaniyyah bermaksud Allah SWT Maha Esa atau Maha Tunggal, tiada sekutu bagi-Nya dalam zat, sifat, dan perbuatan-Nya.' }
-                            ]
-                        },
-                        {
-                            id: 'asmaul-husna',
-                            name: 'Asmaul Husna',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan Asmaul Husna?', answer: 'Asmaul Husna adalah nama-nama Allah yang baik dan indah yang menunjukkan kesempurnaan dan keagungan-Nya. Terdapat 99 Asmaul Husna yang diketahui.' },
-                                { question: 'Sebutkan lima contoh Asmaul Husna dan maksudnya.', answer: 'Ar-Rahman (Maha Pemurah), Ar-Rahim (Maha Penyayang), Al-Malik (Maha Raja), Al-Quddus (Maha Suci), As-Salam (Maha Sejahtera).' },
-                                { question: 'Apakah fadhilat menghafal dan memahami Asmaul Husna?', answer: 'Menghafal dan memahami Asmaul Husna dapat mendekatkan diri kepada Allah, meningkatkan keimanan, mendapat syafaat di akhirat, dan dijanjikan syurga bagi orang yang menghafal dan mengamalkannya.' }
-                            ]
-                        },
-                        {
-                            id: 'sifat-rasul',
-                            name: 'Sifat Mustahil dan Wajib bagi Rasul',
-                            questions: [
-                                { question: 'Apakah sifat wajib bagi Rasul?', answer: 'Sifat wajib bagi Rasul adalah Siddiq (benar), Amanah (jujur), Tabligh (menyampaikan), dan Fatanah (bijaksana).' },
-                                { question: 'Apakah sifat mustahil bagi Rasul?', answer: 'Sifat mustahil bagi Rasul adalah Kizib (dusta), Khianat (khianat), Kitman (menyembunyikan), dan Baladah (bodoh).' },
-                                { question: 'Mengapa Rasul perlu memiliki sifat-sifat wajib tersebut?', answer: 'Rasul perlu memiliki sifat-sifat wajib tersebut kerana mereka adalah utusan Allah yang bertanggungjawab menyampaikan wahyu dan menjadi contoh teladan kepada umat manusia. Sifat-sifat ini memastikan mereka dapat melaksanakan tugas dengan sempurna dan dipercayai oleh umat.' }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: 'sahsiah',
-                    name: 'Sahsiah',
-                    arabicName: 'شخصية',
-                    color: 'red',
-                    subCategories: [
-                        {
-                            id: 'ihsan',
-                            name: 'Ihsan',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan ihsan?', answer: 'Ihsan bermaksud melakukan sesuatu dengan sebaik-baiknya kerana sedar Allah sentiasa melihat dan mengawasi kita. Ia juga bermaksud berbuat baik kepada semua makhluk.' },
-                                { question: 'Bagaimanakah cara untuk menerapkan sifat ihsan dalam kehidupan seharian?', answer: 'Cara menerapkan sifat ihsan termasuk melakukan ibadah dengan khusyuk, bekerja dengan tekun dan jujur, berbuat baik kepada semua orang, membantu orang yang memerlukan, dan sentiasa berusaha memperbaiki diri.' }
-                            ]
-                        },
-                        {
-                            id: 'amanah',
-                            name: 'Amanah',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan amanah?', answer: 'Amanah bermaksud sifat jujur, boleh dipercayai, dan bertanggungjawab dalam melaksanakan tugas atau menjaga sesuatu yang dipercayakan.' },
-                                { question: 'Apakah contoh perbuatan amanah dalam kehidupan seharian?', answer: 'Contoh perbuatan amanah termasuk mengembalikan barang yang dipinjam, menyampaikan pesanan dengan tepat, menjaga rahsia, melaksanakan tugas dengan baik, dan menggunakan harta atau jawatan dengan betul.' }
-                            ]
-                        },
-                        {
-                            id: 'takwa',
-                            name: 'Takwa',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan takwa?', answer: 'Takwa bermaksud menjaga diri daripada azab Allah dengan melaksanakan perintah-Nya dan menjauhi larangan-Nya. Ia juga bermaksud kesedaran dan rasa takut kepada Allah dalam setiap tindakan.' },
-                                { question: 'Bagaimanakah cara untuk meningkatkan ketakwaan kepada Allah?', answer: 'Cara meningkatkan ketakwaan termasuk melaksanakan solat dengan khusyuk, membaca dan memahami Al-Quran, berzikir, muhasabah diri, bergaul dengan orang-orang soleh, dan sentiasa mengingati mati.' }
-                            ]
-                        },
-                        {
-                            id: 'istiqamah',
-                            name: 'Istiqamah',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan istiqamah?', answer: 'Istiqamah bermaksud teguh pendirian, konsisten, dan berterusan dalam melakukan kebaikan dan menjauhi kemungkaran tanpa berputus asa.' },
-                                { question: 'Apakah faedah menjadi seorang yang istiqamah?', answer: 'Faedah menjadi seorang yang istiqamah termasuk mendapat keredhaan Allah, hidup lebih tenang dan teratur, mencapai kejayaan dalam kehidupan, menjadi contoh teladan kepada orang lain, dan mendapat ganjaran syurga di akhirat.' }
-                            ]
-                        },
-                        {
-                            id: 'tawaduk',
-                            name: 'Tawaduk',
-                            questions: [
-                                { question: 'Apakah yang dimaksudkan dengan tawaduk?', answer: 'Tawaduk bermaksud rendah hati, tidak sombong, dan tidak memandang rendah orang lain walaupun mempunyai kelebihan atau kedudukan yang tinggi.' },
-                                { question: 'Bagaimanakah cara untuk menerapkan sifat tawaduk dalam kehidupan?', answer: 'Cara menerapkan sifat tawaduk termasuk tidak membanggakan diri, menghormati semua orang tanpa mengira status, menerima nasihat dan kritikan dengan baik, sentiasa bersyukur, dan mengakui kesilapan sendiri.' }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        };
-
+const data = {
+  categories: [
+    {
+      id: 'peradaban',
+      name: 'Peradaban',
+      arabicName: 'ڤرادبن',
+      color: 'blue',
+      subCategories: [
+        {
+          id: 'adab-keluarga',
+          name: 'Adab dalam Keluarga',
+          questions: [
+            ['Sebutkan doa untuk kedua ibu bapa.', 'اللَّهُمَّ اغْفِرْ لِي وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا.'],
+            ['Bagaimana cara bercakap dengan ibu bapa?', 'Bermanis muka, menggunakan bahasa yang sopan, segera menyahut panggilan, tidak menyampuk, tidak meninggikan suara.'],
+            ['Bagaimana cara mentaati ibu bapa?', 'Mematuhi setiap arahan yang tidak bertentangan dengan Islam.'],
+            ['Apakah hikmah beradab dengan ibu bapa?', 'Mendapat keberkatan dari Allah, mendapat pahala, mendapat ketenangan jiwa, disayangi oleh keluarga dan masyarakat.'],
+            ['Apakah akibat derhaka kepada ibu bapa?', 'Hidup tidak diberkati Allah, disisih oleh keluarga dan masyarakat, mendapat dosa, meruntuhkan keharmonian kekeluargaan.']
+          ]
+        },
+        {
+          id: 'adab-harian',
+          name: 'Adab dalam Kehidupan Harian',
+          questions: [
+            ['Apakah yang dimaksudkan dengan tetamu?', 'Tetamu ialah orang yang datang berkunjung ke rumah kita sama ada dijemput atau tidak.'],
+            ['Sebutkan faedah melayan tetamu.', 'Akan dimurahkan rezeki, dilimpahkan keberkatan dalam hidup, dapat mengeratkan silaturrahim.'],
+            ['Nyatakan adab menziarahi orang sakit.', 'Pilih masa yang sesuai, memberi kata-kata perangsang, mendoakannya agar cepat sembuh, memperlihatkan kasih sayang.'],
+            ['Apakah ciri-ciri mulia seorang peniaga?', 'Berpakaian kemas dan menutup aurat, menjaga hati pelanggan, jujur dalam timbangan, berterus terang tentang barang jualan.'],
+            ['Senaraikan adab-adab ketika di dalam masjid.', 'Niat iktikaf, solat sunat Tahiyyatul Masjid, membaca al-Quran, tidak bermain dan berbuat bising.']
+          ]
+        },
+        {
+          id: 'adab-sekolah',
+          name: 'Adab di Sekolah',
+          questions: [
+            ['Sebutkan adab-adab bercakap dengan guru.', 'Memberi salam, berjabat tangan, merendahkan suara.'],
+            ['Apakah tujuan kamu pergi ke sekolah?', 'Menuntut ilmu, mendapat pahala, mendapat rakan, mendapat kejayaan pada masa hadapan.'],
+            ['Apakah perkara-perkara yang tidak patut dilakukan ketika guru sedang mengajar?', 'Tidur, bermain, bersembang, membuat bising, tidak menghormati guru.'],
+            ['Sebutkan perlakuan yang tidak wajar dilakukan terhadap rakan.', 'Bergaduh, mengumpat, menghina, meninggikan suara.'],
+            ['Bagaimanakah cara menjaga harta benda sekolah.', 'Mematuhi peraturan, tidak merosakkan harta benda sekolah, menyayangi harta benda sekolah seperti harta sendiri.']
+          ]
+        },
+        {
+          id: 'adab-pakaian',
+          name: 'Adab Berpakaian',
+          questions: [
+            ['Sebutkan ciri-ciri berpakaian orang Islam.', 'Menutup aurat, sederhana, bersih.'],
+            ['Apakah kesan tidak menutup aurat?', 'Tidak disukai Allah, tidak dihormati, hidup tidak teratur, mengundang bahaya dan maksiat, menggambarkan peribadi buruk.'],
+            ['Apakah tujuan menutup aurat?', 'Menjaga maruah diri, terpelihara daripada fitnah, dihormati.'],
+            ['Apakah hukum menutup aurat?', 'Wajib.'],
+            ['Sebutkan batas aurat bagi lelaki dan perempuan.', 'Batas aurat lelaki adalah antara pusat hingga lutut manakala bagi perempuan seluruh anggota badan kecuali tapak tangan dan muka.']
+          ]
+        },
+        {
+          id: 'doa-harian',
+          name: 'Doa Harian',
+          questions: [
+            ['Sila baca doa sebelum belajar.', 'اللَّهُمَّ افْتَحْ عَلَيْنَا حِكْمَتَكَ، وَانْشُرْ عَلَيْنَا مِنْ خَزَائِنِ رَحْمَتِكَ، يَا أَرْحَمَ الرَّاحِمِينَ.'],
+            ['Sila baca doa sebelum tidur.', 'بِاسْمِكَ اللَّهُمَّ أَحْيَا وَأَمُوتُ.'],
+            ['Sila baca doa naik kenderaan.', 'سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَىٰ رَبِّنَا لَمُنْقَلِبُونَ.'],
+            ['Sila baca doa masuk tandas.', 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ.'],
+            ['Sila baca doa sebelum makan.', 'اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ.'],
+            ['Sila baca doa selepas makan.', 'الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِمِينَ.']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'ibadah',
+      name: 'Ibadah',
+      arabicName: 'عبادة',
+      color: 'green',
+      subCategories: [
+        {
+          id: 'toharoh',
+          name: 'Toharoh (Kesucian)',
+          questions: [
+            ['Apakah erti toharoh?', 'Toharoh ialah membersihkan tubuh badan daripada najis atau hadas kecil dan hadas besar.'],
+            ['Sebutkan jenis-jenis air mutlak.', 'Air hujan, air sungai, air laut, air embun, air mata air, air salji, air telaga.'],
+            ['Sebutkan jenis-jenis najis', 'Najis mukhoffafah, najis mutawassitoh, najis mughollazoh.']
+          ]
+        },
+        {
+          id: 'solat',
+          name: 'Solat',
+          questions: [
+            ['Berapakah rukun solat?', 'Ada 13.'],
+            ['Sebutkan hikmah menunaikan solat.', 'Dapat mendisiplinkan diri, dapat menyihatkan tubuh badan, dapat mencerdaskan akal, dapat menghindari perkara mungkar.'],
+            ['Nyatakan akibat meninggalkan solat.', 'Jiwa tidak tenteram, cenderung melakukan maksiat, disempitkan rezeki.']
+          ]
+        },
+        {
+          id: 'puasa',
+          name: 'Puasa',
+          questions: [
+            ['Apakah erti puasa?', 'Puasa ialah menahan diri daripada melakukan perkara yang membatalkan puasa dari terbit fajar sadiq hingga terbenam matahari disertai niat dan mengikut syarat tertentu.'],
+            ['Sebutkan ciri-ciri ibadah puasa yang sempurna.', 'Melaksanakan semua rukun puasa, mengamalkan perkara-perkara sunat puasa, menjauhi perkara makruh ketika berpuasa, meninggalkan perkara-perkara yang diharamkan ketika berpuasa.'],
+            ['Nyatakan hikmah berpuasa.', 'Mengukuhkan iman dan takwa kepada Allah, membentuk sifat mulia seperti sabar dan bersyukur, menjauhkan diri daripada dosa dan kejahatan, menyihatkan tubuh badan mencerdaskan akal.']
+          ]
+        },
+        {
+          id: 'hadas-besar',
+          name: 'Menyucikan Hadas Besar',
+          questions: [
+            ['Nyatakan sebab-sebab yang mewajibkan mandi.', 'Keluar mani, haid, jimak, wiladah, nifas, mati selain mati syahid.'],
+            ['Apakah tujuan mengangkat hadas besar?', 'Membersihkan diri daripada kekotoran jasmani dan rohani serta mengembalikan kecergasan tubuh badan.'],
+            ['Apakah yang haram dilakukan Ketika berhadas besar?', 'Solat, tawaf, menyentuh, membawa dan membaca al-Quran, masuk ke masjid.']
+          ]
+        },
+        {
+          id: 'solat-jamak-qasar',
+          name: 'Solat Jamak dan Qasar',
+          questions: [
+            ['Mengapakah solat jamak dan qasar disyariatkan dalam agama Islam?', 'Untuk memberi kemudahan kepada umat Islam yang bermusafir.'],
+            ['Apakah hukum solat jamak dan qasar?', 'Harus.'],
+            ['Nyatakan satu sebab dibolehkan jamak dan qasar.', '1. Dalam keadaan bermusafir. 2.Perjalanan melebihi 2 marhalah. 3. Perjalanan bukan untuk maksiat.']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'akidah',
+      name: 'Akidah',
+      arabicName: 'عقيدة',
+      color: 'purple',
+      subCategories: [
+        {
+          id: 'rukun-islam-iman',
+          name: 'Rukun Islam/Rukun Iman',
+          questions: [
+            ['Sebutkan semua rukun Islam.', 'Rukun Islam ialah mengucap dua kalimah syahadah, solat lima Waktu, berpuasa di bulan Ramadan, mengeluarkan zakat, menunaikan haji bagi yang mampu.'],
+            ['Sebutkan rukun iman.', 'Beriman kepada Allah, beriman kepada Malaikat, beriman kepada kitab-kitab, beriman kepada Rasul-Rasul, beriman kepada hari kiamat, beriman kepada qada dan qadar.'],
+            ['Sebutkan lafaz dua kalimah syahadah dan ertinya.', 'Asyhadu alla ilaha illallah wa asyhadu anna muhammadar rasulullah. Ertinya: Aku bersaksi bahawa tiada Tuhan melainkan Allah dan aku bersaksi bahawa Muhammad itu pesuruh Allah.']
+          ]
+        },
+        {
+          id: 'sifat-wajib-allah',
+          name: 'Sifat Wajib bagi Allah',
+          questions: [
+            ['Apakah hukum beriman dengan sifat wajib Allah.', 'Wajib.'],
+            ['Nyatakan kesan mempercayai sifat wajib Allah.', 'Menambahkan keyakinan dan keimanan seseorang.'],
+            ['Apakah hukum tidak mempercayai sifat wajib Allah?', 'Berdosa besar dan dimasukkan ke dalam neraka.']
+          ]
+        },
+        {
+          id: 'asmaul-husna',
+          name: 'Asmaul Husna',
+          questions: [
+            ['Apakah erti Asmaul Husna?', 'Asmaul Husna ialah nama-nama Allah.'],
+            ['Berapakah jumlah Asmaul Husna?', 'Ada 99.'],
+            ['Berikan erti bagi empat nama Allah berikut.', 'Ar-Rahman (Maha Pemurah), Ar-Rahim (Maha Penyayang), Al-Malik (Maha Berkuasa), Al-Quddus (Maha Suci).']
+          ]
+        },
+        {
+          id: 'sifat-rasul',
+          name: 'Sifat Mustahil dan Wajib bagi Rasul',
+          questions: [
+            ['Sebutkan sifat-sifat wajib bagi rasul', 'Sifat wajib bagi rasul ialah Siddiq, Amanah, Tabligh, Fatonah.'],
+            ['Berapakah sifat-sifat mustahil bagi rasul?', 'Ada empat.'],
+            ['Sebutkan tiga contoh sifat harus bagi rasul.', 'Tiga sifat harus bagi rasul ialah makan, minum, tidur, berkahwin (Sifat lain yang bersesuaian boleh diterima).']
+          ]
+        }
+      ]
+    },
+    {
+      id: 'sahsiah',
+      name: 'Sahsiah',
+      arabicName: 'شخصية',
+      color: 'red',
+      subCategories: [
+        {
+          id: 'ihsan',
+          name: 'Ihsan',
+          questions: [
+            ['Apakah maksud ihsan?', 'Ihsan bermaksud melakukan ibadah dengan baik dan bersungguh-sungguh kerana sedar Allah melihat, mendengar dan mengetahuinya.'],
+            ['Apakah sifat Utama ihsan?', 'Sentiasa mengharapkan keredaan Allah.']
+          ]
+        },
+        {
+          id: 'amanah',
+          name: 'Amanah',
+          questions: [
+            ['Apakah akibat tidak amanah?', 'Mendapat dosa, tidak dipercayai rakan, dimusuhi rakan.'],
+            ['Sebutkan ciri-ciri pelajar amanah.', 'Melaksanakan setiap tugasan, menjaga kebersihan kelas, menepati masa belajar, tidak mengambil harta benda orang lain.']
+          ]
+        },
+        {
+          id: 'takwa',
+          name: 'Takwa',
+          questions: [
+            ['Apakah maksud takwa?', 'Takwa ialah mengerjakan perintah Allah dan meninggalkan larangan-Nya.'],
+            ['Mengapakah kita perlu bertakwa?', 'Mendapat keredaan Allah, mendapat pahala, memperoleh kebahagian di dunia dan di akhirat.']
+          ]
+        },
+        {
+          id: 'istiqamah',
+          name: 'Istiqamah',
+          questions: [
+            ['Berikan contoh istiqamah seorang pelajar.', 'Sentiasa menepati masa, berterusan mengulang kaji pelajaran.'],
+            ['Mengapakah pelajar perlu bersifat istiqamah?', 'Pelajar perlu beristiqamah supaya mencapai kejayaan dan tidak mudah berputus asa.']
+          ]
+        },
+        {
+          id: 'tawaduk',
+          name: 'Tawaduk',
+          questions: [
+            ['Sebutkan ciri tawaduk pada seorang pelajar yang Berjaya.', 'Bersyukur kepada Allah, tidak berbangga diri, suka berkongsi ilmu dengan orang lain.'],
+            ['Apakah kelebihan orang yang tawaduk?', 'Taat perintah Allah, bersifat lemah lembut dan penyabar, bijaksana.']
+          ]
+        }
+      ]
+    }
+  ]
+};
         // Game state
         const gameState = {
             belajar: {
@@ -801,7 +814,7 @@
                 card.innerHTML = `
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">${category.name}</h3>
-                        <p class="text-gray-600 mb-4">${category.arabicName}</p>
+                        <p class="text-gray-600 mb-4 arabic-text">${category.arabicName}</p>
                         <p class="text-sm text-gray-500">${category.subCategories.length} subkategori</p>
                     </div>
                 `;
@@ -824,7 +837,9 @@
             const container = document.getElementById('belajar-subkategori-list');
             container.innerHTML = '';
             
-            document.getElementById('belajar-subkategori-title').textContent = `${category.name} (${category.arabicName})`;
+const subTitle = document.getElementById('belajar-subkategori-title');
+subTitle.innerHTML = `${category.name} <span class="arabic-text">(${category.arabicName})</span>`;
+
             
             category.subCategories.forEach(subCategory => {
                 const isCompleted = gameState.belajar.completedSubCategories[subCategory.id];
@@ -875,56 +890,52 @@ function showBelajarCurrentQuestion() {
     const totalQuestions = subCategory.questions.length;
 
     if (questionIndex >= totalQuestions) {
-        // Semua soalan dah habis
         gameState.belajar.completedSubCategories[subCategory.id] = true;
-
-        // Semak kalau semua subkategori dalam kategori ini dah selesai
         const allDone = gameState.belajar.currentCategory.subCategories.every(sc => gameState.belajar.completedSubCategories[sc.id]);
-
         if (allDone) {
             gameState.belajar.completedCategories[gameState.belajar.currentCategory.id] = true;
         }
-
-        // Kembali ke Subkategori List
         renderBelajarSubkategori(gameState.belajar.currentCategory);
         showBelajarSubkategori();
 
-        // Kalau semua kategori habis, keluar popup Tahniah
-const semuaKategoriHabis = data.categories.every(cat => gameState.belajar.completedCategories[cat.id]);
-if (semuaKategoriHabis) {
-    document.getElementById('congratulations-modal').classList.remove('hidden');
-    document.getElementById('score-display').classList.add('hidden'); // sembunyikan markah
-    document.getElementById('restart-belajar-btn').classList.remove('hidden'); // tunjuk Belajar Semula
-    document.getElementById('restart-btn').classList.add('hidden'); // sembunyikan Main Semula
-}
-
-
+        const semuaKategoriHabis = data.categories.every(cat => gameState.belajar.completedCategories[cat.id]);
+        if (semuaKategoriHabis) {
+            document.getElementById('congratulations-modal').classList.remove('hidden');
+            document.getElementById('score-display').classList.add('hidden');
+            document.getElementById('restart-belajar-btn').classList.remove('hidden');
+            document.getElementById('restart-btn').classList.add('hidden');
+        }
         return;
     }
 
     const question = subCategory.questions[questionIndex];
+    const questionText = question[0];
+    const answerText = question[1];
+    const isQuestionArabic = /[\u0600-\u06FF]/.test(questionText);
+    const isAnswerArabic = /[\u0600-\u06FF]/.test(answerText);
 
     const card = document.createElement('div');
     card.className = 'bg-white rounded-xl shadow-lg p-6';
 
-    card.innerHTML = `
+    const questionContent = document.createElement('div');
+    questionContent.innerHTML = `
         <h5 class="text-lg font-bold mb-4">Soalan ${questionIndex + 1} / ${totalQuestions}</h5>
-        <p class="text-xl mb-6">${question.question}</p>
+        <p class="text-xl mb-6 ${isQuestionArabic ? 'arabic-text' : ''}">${questionText}</p>
         <div class="text-center">
-            <button id="next-question-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-bold">Soalan Seterusnya</button>
+            <button id="next-question-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-bold">Jawab 🧠</button>
         </div>
     `;
 
+    card.appendChild(questionContent);
     container.appendChild(card);
 
     document.getElementById('next-question-btn').addEventListener('click', () => {
-        // Bila klik, tunjukkan jawapan dulu
-        card.innerHTML = `
+        questionContent.innerHTML = `
             <h5 class="text-lg font-bold mb-4">Soalan ${questionIndex + 1} / ${totalQuestions}</h5>
-            <p class="text-xl mb-6">${question.question}</p>
-            <p class="text-green-600 font-bold mb-6">${question.answer}</p>
+            <p class="text-xl mb-6 ${isQuestionArabic ? 'arabic-text' : ''}">${questionText}</p>
+            <p class="text-green-600 font-bold mb-6 ${isAnswerArabic ? 'arabic-text' : ''}">${answerText}</p>
             <div class="text-center">
-                <button id="continue-btn" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-bold">Teruskan</button>
+                <button id="continue-btn" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-bold">Teruskan ➡️</button>
             </div>
         `;
 
@@ -934,6 +945,8 @@ if (semuaKategoriHabis) {
         });
     });
 }
+
+
 
 
 
@@ -951,7 +964,7 @@ if (semuaKategoriHabis) {
                 card.innerHTML = `
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">${category.name}</h3>
-                        <p class="text-gray-600 mb-4">${category.arabicName}</p>
+                        <p class="text-gray-600 mb-4 arabic-text">${category.arabicName}</p>
                         <p class="text-sm text-gray-500">${category.subCategories.length} subkategori</p>
                     </div>
                 `;
@@ -974,7 +987,9 @@ if (semuaKategoriHabis) {
             const container = document.getElementById('kuiz-subkategori-list');
             container.innerHTML = '';
             
-            document.getElementById('kuiz-subkategori-title').textContent = `${category.name} (${category.arabicName})`;
+const subTitle = document.getElementById('kuiz-subkategori-title');
+subTitle.innerHTML = `${category.name} <span class="arabic-text">(${category.arabicName})</span>`;
+
             
             category.subCategories.forEach(subCategory => {
                 const isCompleted = gameState.kuiz.completedSubCategories[subCategory.id];
@@ -1025,29 +1040,21 @@ function showKuizCurrentQuestion() {
     const totalQuestions = subCategory.questions.length;
 
     if (questionIndex >= totalQuestions) {
-        // Semua soalan dah habis
         gameState.kuiz.completedSubCategories[subCategory.id] = true;
-
-        // Semak kalau semua subkategori dalam kategori ini dah selesai
         const allDone = gameState.kuiz.currentCategory.subCategories.every(sc => gameState.kuiz.completedSubCategories[sc.id]);
-
         if (allDone) {
             gameState.kuiz.completedCategories[gameState.kuiz.currentCategory.id] = true;
         }
-
-        // Kembali ke Subkategori List
         renderKuizSubkategori(gameState.kuiz.currentCategory);
         showKuizSubkategori();
 
-        // Kalau semua kategori habis, keluar popup Tahniah
         const semuaKategoriHabis = data.categories.every(cat => gameState.kuiz.completedCategories[cat.id]);
         if (semuaKategoriHabis) {
-            clearInterval(gameState.kuiz.timer); // Hentikan masa
+            clearInterval(gameState.kuiz.timer);
             document.getElementById('final-score').textContent = `${gameState.kuiz.score}/100`;
             document.getElementById('score-display').classList.remove('hidden');
             document.getElementById('congratulations-modal').classList.remove('hidden');
         }
-
         return;
     }
 
@@ -1061,9 +1068,12 @@ function showKuizCurrentQuestion() {
         pointValue = 2;
     }
 
+    // detect kalau soalan Arab
+    const isArabic = /[\u0600-\u06FF]/.test(question[0]);
+
     card.innerHTML = `
         <h5 class="text-lg font-bold mb-4">Soalan ${questionIndex + 1} / ${totalQuestions}</h5>
-        <p class="text-xl mb-6">${question.question}</p>
+        <p class="text-xl mb-6 ${isArabic ? 'arabic-text' : ''}">${question[0]}</p>
         <div class="text-center space-x-4">
             <button id="jawab-betul" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-bold">Betul (+${pointValue} markah)</button>
             <button id="jawab-salah" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg text-lg font-bold">Salah</button>
@@ -1080,6 +1090,7 @@ function showKuizCurrentQuestion() {
         jawabSoalan(false, 0);
     });
 }
+
 
 function jawabSoalan(betul, markah) {
     if (betul) {
@@ -1276,7 +1287,7 @@ document.getElementById('kuiz-back-to-subkategori').addEventListener('click', ()
     
     <h2 id="adHeadline" class="text-xl font-bold text-gray-800 mb-2 text-center">Tawaran Hebat!</h2>
     <p id="adDescription" class="text-sm text-gray-600 mb-3 text-justify leading-relaxed tracking-wide">Hubungi kami hari ini untuk diskaun eksklusif!</p>
-    <a id="adLink" href="#" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700 transition-all duration-700 font-semibold text-sm">Hubungi</a>
+    <a id="adLink" href="#" target="_blank" class="block w-full bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700 transition-all duration-700 font-semibold text-sm">Klik Sini</a>
   </div>
 
 </div>
@@ -1287,32 +1298,32 @@ document.getElementById('kuiz-back-to-subkategori').addEventListener('click', ()
     {
       image: "https://raw.githubusercontent.com/raqiib95/penghayatan-cara-hidup-islam/refs/heads/main/images/servis%20iklan%20bulanan.png",
       headline: "Servis Iklan",
-      description: "Hebahkan produk/servis anda serendah RM50/bulan. Klik Hubungi.",
-      link: "https://wa.me/60123456789"
+      description: "Hebahkan produk/servis anda serendah RM50/bulan. Berminat, Klik Sini.",
+      link: "https://wasap.my/+601172706678"
     },
     {
       image: "https://raw.githubusercontent.com/raqiib95/penghayatan-cara-hidup-islam/refs/heads/main/images/nota%20%26%20latihan%20upkk.png",
       headline: "Nota Latihan UPKK",
-      description: "Dapatkan nota & latihan ekslusif UPKK. Klik Hubungi!",
-      link: "https://example.com/kelas-arab"
+      description: "Dapatkan nota & latihan ekslusif UPKK. Berminat, Klik Sini!",
+      link: "https://wasap.my/+601172706678"
     },
     {
       image: "https://raw.githubusercontent.com/raqiib95/penghayatan-cara-hidup-islam/refs/heads/main/images/group%20telegram.png",
       headline: "BBM Percuma!",
-      description: "Layari BBM Percuma dengan join channel kami. Klik Hubungi.",
+      description: "Dapatkan BBM Percuma dengan join channel kami. Berminat, Klik Sini.",
       link: "https://t.me/iqraqedu"
     },
     {
       image: "https://raw.githubusercontent.com/raqiib95/penghayatan-cara-hidup-islam/refs/heads/main/images/sokongan.png",
       headline: "Sokong Kami",
-      description: "Nak bantu menyokong pembangunan BBM kami? Scan QR atau klik hubungi.",
+      description: "Nak bantu menyokong pembangunan BBM kami? Klik Sini.",
       link: "https://example.com/langganan"
     },
     {
       image: "https://raw.githubusercontent.com/raqiib95/penghayatan-cara-hidup-islam/refs/heads/main/images/servis%20iklan%20bulanan.png",
       headline: "Iklan RM50 je",
-      description: "Jom beriklan dengan kami serendah RM50/bulan.",
-      link: "https://example.com/sumbangan"
+      description: "Jom beriklan dengan kami serendah RM50/bulan. Klik Sini",
+      link: "https://wasap.my/+601172706678"
     }
   ];
 
